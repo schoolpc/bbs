@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>怪しげ(新)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <div id="bar">
+            <h2>あやしげなわーるど(新)</h2>
+        </div>
+        <div id="new">
+            <p>
+                ひろゆきに憧れてつくった掲示板(チャットツール)です。<br>
+                学校のPCでもブロックされてないです。(入れないときは別のブラウザを試してみてください) [<a href="https://schoolpc.github.io" target="_blank">学校のPC攻略サイト</a>]<br>
+                スレッドタイトルとレスの内容は空白にするのは禁止で。
+                <a href="" target="_blank">このサイトのQRコード</a><br>
+                </p>
+        </div>
+        <div id="scroller">
+            <ul id='messages'>
+            </ul>
+        </div>
+        <div id="form">
+            <h4>スレ投稿</h4>
+            <input type='text' maxlength="100" id="messageInput" placeholder="スレタイトル 100文字まで"><br>
+            <input type='text' maxlength="50" id="nameInput" placeholder="名前 50文字まで">
+            <button id="button" onclick="sendbutton();">投稿</button>
+        </div>
+    </div>
+</body>
+    <script src="index.js"></script>
+</html>

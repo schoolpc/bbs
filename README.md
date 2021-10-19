@@ -1,1 +1,1 @@
-# bbs.github.io
+# schoolpc.github.io

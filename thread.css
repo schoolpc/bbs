@@ -1,0 +1,105 @@
+body{
+    width:100%;
+    background-color:#bbbbff;
+    padding:0px;
+    margin:0px;
+}
+@font-face {
+    font-family: "aahub";
+    src: url("https://ro5evunpb8zi7crga5rfqg-on.drv.tw/font/aahub.woff2") format("woff2"),
+      url("https://ro5evunpb8zi7crga5rfqg-on.drv.tw/font/aahub.woff") format("woff"),
+      url("https://ro5evunpb8zi7crga5rfqg-on.drv.tw/font/aahub.ttf") format("ttf");
+    font-display: swap;
+  }
+  
+#bar{
+    border:solid 1px #cccccc;
+    background-color:#ffffff;
+    margin: 0px;
+    padding:7px;
+    top: 0;
+    z-index: 1;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+#title{
+    position: relative;
+    background: #fff;
+    border: 0px solid #777;
+    margin: 0px 10px;
+    padding: 0px;
+    border-radius: 10px;
+    display:inline-block;
+    font-family: "aahub";
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+#scroller {
+    height: 350px;
+    overflow: auto;
+    margin:0px;
+}
+
+
+/*******************************
+* 左からの吹き出し
+********************************/
+.left_balloon {
+    position: relative;
+    background: #f1f0f0;
+    border: 0px solid #777;
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display:inline-block;
+    font-family: "aahub";
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+/*******************************
+* 割り込みを解除
+********************************/
+.clear_balloon{
+  clear: both;
+}
+
+#resu{
+    margin:0em; 
+    padding:1em; 
+    background-color:#fff; 
+    border-radius:14px;
+}
+
+#time{
+    color: #666;
+}
+
+.sender_name{
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color: #666;
+}
+
+#form{
+    padding: 14px;
+    border:solid 1px #777;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display:inline-block;
+    margin: 0px 10px;
+}
