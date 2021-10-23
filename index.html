@@ -26,10 +26,12 @@
             </ul>
         </div>
         <div id="form">
-            <h4>スレ投稿</h4>
-            <input type='text' maxlength="100" id="messageInput" placeholder="スレタイトル 100文字まで"><br>
-            <input type='text' maxlength="50" id="nameInput" placeholder="名前 50文字まで">
-            <button id="button" onclick="sendbutton();">投稿</button>
+            <form action="Javascript:sendbutton();">
+                <h4>スレ投稿</h4>
+                <input type='text' maxlength="100" id="messageInput" placeholder="スレタイトル 100文字まで" required><br>
+                <input type='text' maxlength="50" id="nameInput" placeholder="名前 50文字まで" required>
+                <button type="submit"  id="button" >投稿</button>
+            </form>
         </div>
     </div>
 </body>
