@@ -38,6 +38,7 @@ messagesRef.on('child_added', function (snapshot) {
     var type = data.type;
     var ID = data.ID;
 
+    msgJson.unshift({name:username, text:message, dat:time, type:type, ID:ID});
 
     if (data.type === "thread") {
     var messageElement = $("<il><p class='sender_name'></p><div class='left_balloon'><h3><a href='thread.html?t="+ ID +"'>" + message + "</a></h3>" + username + " | " + time + "</div><p class='clear_balloon'></p></il>");
