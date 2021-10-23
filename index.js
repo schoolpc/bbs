@@ -27,6 +27,7 @@ function sendbutton() {
         $('#scroller').scrollTop($('#messages').height());
 }
 
+var msgJson = [];
 var threadcont = [];
 // データベースにデータが追加されたときに発動する
 messagesRef.on('child_added', function (snapshot) {
