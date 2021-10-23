@@ -1,5 +1,5 @@
 // データベースと接続する
-var messagesRef = new Firebase('https://bbs2-3be4b-default-rtdb.firebaseio.com/');
+var messagesRef = new Firebase('https://bbs2-fb118-default-rtdb.firebaseio.com/');
 
 var messageField = $('#messageInput');
 var nameField = $('#nameInput');
