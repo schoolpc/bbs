@@ -27,7 +27,6 @@ function sendbutton() {
         $('#scroller').scrollTop($('#messages').height());
 }
 
-var msgJson = [];
 var threadcont = [];
 // データベースにデータが追加されたときに発動する
 messagesRef.on('child_added', function (snapshot) {
@@ -38,8 +37,6 @@ messagesRef.on('child_added', function (snapshot) {
     var time = data.dat;
     var type = data.type;
     var ID = data.ID;
-
-    msgJson.unshift({name:username, text:message, dat:time, type:type, ID:ID});
 
     if (data.type === "thread") {
     var messageElement = $("<il><p class='sender_name'></p><div class='left_balloon'><h3><a href='thread.html?t="+ ID +"'>" + message + "</a></h3>" + username + " | " + time + "</div><p class='clear_balloon'></p></il>");
