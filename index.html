@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.js" integrity="sha512-bvQAGUdz84PpeKWrShm1eEp20Fkcv7PJespsVWVtkTB74C8rNmg75Hru8w1AXnfiNHXnT/XF2jqZskyU3bIaMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>怪しげ(:Re)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class="overflow-hidden">
+    <div class="bg-light bg-gradient h-100 p-0">
+        <div id="bar">
+            <h3>あやしげなわーるど(:Re)</h3>
+        </div>
+
+        <div class="row ">
+            <div class="col">
+                <div class="card p-3 m-3">
+                    ひろゆきに憧れてつくった掲示板(チャットツール)です。<br>
+                    学校のPCでもブロックされてないです。(入れないときは別のブラウザを試してみてください) <br>
+                    スレッドタイトルとレスの内容は空白にするのは禁止で。
+                    <a href="https://schoolpc.github.io" target="_blank">学校のPC攻略サイト</a>
+                    <a href="https://drive.google.com/uc?id=1lSGEyxb280g-MMAdL1vcbmc7F_QJzphD" target="_blank">このサイトのQRコード</a>
+            </div>
+            <div id="scroller" class="scroller">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <input class="search form-control" style="width: 300px;" type="search" placeholder="Search" />
+                    </div>
+                  </nav>
+                <ul id='messages' class="list"></ul>
+            </div>
+            <script>
+                setTimeout(function(){
+                    var options = {
+                    valueNames: [ 'name' ]
+                  };
+                  var userList = new List('scroller', options);
+                },1000);
+            </script>
+            <div class="card mx-3 p-3">
+                <form action="Javascript:sendbutton();">
+                    <h4>スレ投稿</h4>
+                    <input type='text' maxlength="100" id="messageInput" placeholder="スレタイトル 100文字まで" required><br>
+                    <input type='text' maxlength="50" id="nameInput" placeholder="名前 50文字まで">
+                    <button type="submit"  id="button" >投稿</button>
+                </form>
+            </div>
+            </div>
+            <div class="card col-3 " id='newspase'>
+                <div  class="h-100 d-inline-block">
+                    <h3 class="m-3">最新レス</h3>
+                    <ul id="new"></ul>
+                </div>
+            </div>
+          </div>
+    </div>
+</body>
+    <script defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</html>
