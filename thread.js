@@ -109,6 +109,8 @@ dbref.on('child_added', function (snapshot) {
         var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
     }
 
+    var msgurl = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
+
 
     if ( msg.search(/^>>+\d{1,}/gm) !== -1) { 
         var renum = /^>>+\d{1,}/gm.exec(msg); 
@@ -137,7 +139,7 @@ dbref.on('child_added', function (snapshot) {
 
     if(type === "resu"){
 
-        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + message + "<br><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
+        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + msgurl + "<br><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
         newList.prepend(newElement);
     }
     
