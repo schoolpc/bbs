@@ -82,6 +82,7 @@ dbref.on('child_added', function (snapshot) {
     var type = data.type;
     var ID = data.ID;
     var numb = data.n;
+    message = message.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
     if ( message.match(/iframe/)) {
         var msg = message;
     }else{
@@ -108,6 +109,8 @@ dbref.on('child_added', function (snapshot) {
     var type = data.type;
     var ID = data.ID;
     var numb = data.n;
+
+    message = message.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
     
     if ( message.match(/iframe/)) {
         var msg = message;
