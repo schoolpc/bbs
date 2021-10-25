@@ -54,7 +54,7 @@ function sendbutton() {
             }
 
             if(type === "resu"){
-                var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + name + " | <time class='time'>" + dat + "</time><p id='resu'>" + text + "</p><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></div><p class='clear_balloon'></p></il>");
+                var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + name + " | <time class='time'>" + dat + "</time><p id='resu'>" + text + "<a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
                 newList.prepend(newElement);
             }
 
