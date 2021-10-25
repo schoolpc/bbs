@@ -44,7 +44,7 @@ function sendbutton() {
             //取得したデータ
             const data = snapshot.val();
             const ID = data.ID;
-            const text = data.text;
+            var text = data.text;
             const name = data.name;
             const dat = data.dat;
             const type = data.type;
