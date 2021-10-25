@@ -41,7 +41,7 @@ ul,li{
     text-align: left;
 }
 #scroller {
-    height: 400px;
+    height: 380px;
     overflow: auto;
 }
 
