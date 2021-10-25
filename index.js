@@ -48,6 +48,7 @@ function sendbutton() {
             const name = data.name;
             const dat = data.dat;
             const type = data.type;
+            text = text.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
 
             if(type === "thread"){
                 var messageElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'><h4><a class='name' href='thread.html?t="+ ID +"'>" + text + "</a></h4>" + name + " | <time class='time'>" + dat + "</time></div><p class='clear_balloon'></p></il>");
