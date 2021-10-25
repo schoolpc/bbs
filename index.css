@@ -40,10 +40,6 @@ ul,li{
     list-style-type: none;
     text-align: left;
 }
-#scroller {
-    height: 600px;
-    overflow: auto;
-}
 
 /*******************************
 * 左からの吹き出し
@@ -66,7 +62,10 @@ ul,li{
   clear: both;
 }
 
-
+#scroller {
+    height: 600px;
+    overflow: auto;
+}
 
 .sender_name{
     margin-bottom: -5px;
