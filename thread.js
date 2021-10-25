@@ -126,7 +126,7 @@ dbref.on('child_added', function (snapshot) {
         }
     }
     if (data.type === "thread" && data.ID === thID) {
-        var titleElement = $("<il><div class='card mt-3 mx-3 mb-1 p-3' style='display:inline-block;'><h4 class='m-0'>" + message + "</h4>" + username + " | " + time + "</div><p class='clear_balloon'></p></il>");
+        var titleElement = $("<il><div class='card mt-3 mx-3 mb-0 p-3' style='display:inline-block;'><h4 class='m-0'>" + message + "</h4>" + username + " | " + time + "</div><p class='clear_balloon'></p></il>");
         title.replaceWith(titleElement);
     }
 
