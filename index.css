@@ -62,7 +62,7 @@ ul,li{
   clear: both;
 }
 
-#scroller {
+.scroller {
     height: 600px;
     overflow: auto;
 }
