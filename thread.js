@@ -105,7 +105,9 @@ dbref.on('child_added', function (snapshot) {
     var ID = data.ID;
     var numb = data.n;
     
-    var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
+    if ( message.match(/iframe/)) {}else{
+        var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
+    }
 
 
     if ( msg.search(/^>>+\d{1,}/gm) !== -1) { 
