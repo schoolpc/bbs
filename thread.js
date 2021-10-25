@@ -135,7 +135,7 @@ dbref.on('child_added', function (snapshot) {
 
     if(type === "resu"){
 
-        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + message + "<a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
+        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + message + "<br><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
         newList.prepend(newElement);
     }
     
