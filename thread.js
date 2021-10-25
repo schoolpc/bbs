@@ -82,7 +82,11 @@ dbref.on('child_added', function (snapshot) {
     var type = data.type;
     var ID = data.ID;
     var numb = data.n;
-    var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a>");
+    if ( message.match(/iframe/)) {
+        var msg = message;
+    }else{
+        var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
+    }
     console.log(key);
 
     if (data.ID == thID && data.type === "resu" ) {
@@ -105,10 +109,13 @@ dbref.on('child_added', function (snapshot) {
     var ID = data.ID;
     var numb = data.n;
     
-    if ( message.match(/iframe/)) {}else{
+    if ( message.match(/iframe/)) {
+        var msg = message;
+    }else{
         var msg = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
     }
-
+    
+    var msgnew = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a>");
     var msgurl = message.replace(/(http(s)?:\/\/[a-zA-Z0-9-.!'()*;/?:@&=+$,%#]+)/gi, "<a href='$1' target='_blank'>$1</a><br><img src='$1' style ='max-height:300px'></img>");
 
 
@@ -139,7 +146,7 @@ dbref.on('child_added', function (snapshot) {
 
     if(type === "resu"){
 
-        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + msgurl + "<br><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
+        var newElement = $("<il><div class='card my-1 p-3' style='display:inline-block;'>" + username + " | <time class='time'>" + time + "</time><p id='resu'>" + message + "<br><a class='name' href='thread.html?t="+ ID +"'>元スレ</a></p></div><p class='clear_balloon'></p></il>");
         newList.prepend(newElement);
     }
     
