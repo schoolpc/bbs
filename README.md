@@ -1,2 +1,0 @@
-# schoolpc.github.io
-
