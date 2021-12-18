@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" class="d-inline-block h-100 w-100">
+    <head>
+        <meta name="robots" content="noindex">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/garlic.js/1.4.2/garlic.min.js" integrity="sha512-UWthFfLTzUb9PtiaLyf8Z9HD0NzXoZ++0+qBwD+CGnehBBLWgz+t2p3xL08lrkmnB1pLsjkQcoTOzsiRgwJmxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" type="text/css" href="thread.css">
+        <title>怪しげ(:Re)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+    <body class="bg-light bg-gradient d-inline-block h-100 w-100 overflow-hidden">
+            <div id="bar">
+                <h3 class="m-0">あやしげなわーるど(:Re)</h3>
+            [<a href="index.html">スレ一覧</a>]
+            </div>
+            <div class="row justify-content-start m-0 p-0" style="position:relative">
+                <div class="col p-0 m-0" style="position:relative">
+                    <div id="title">
+                    </div>
+                    <div id="scroller" class="d-inline-block m-0 w-100">
+                        <ul id='messages'class="p-3 m-0">
+                        </ul>
+                    </div>
+                    <div class="card p-3" style="bottom: 0px;">
+                        <form action="Javascript:sendbutton();" data-persist="garlic">
+                            <input class="form-control form-control-sm mb-1" type='text' maxlength="50" id="nameInput" placeholder="ユーザー名 50文字まで">
+                            <textarea class="form-control form-control-sm mb-1" id="messageInput" rows="3" maxlength="1000" placeholder="レス内容 1000文字まで" required></textarea>
+                            <button type="submit" id="button"class="btn btn-primary mb-0">投稿</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card col-3 d-inline-block h-100 m-0 p-0" id="newspase" >
+                        <h3 class="m-3">最新レス</h3>
+                        <ul id="new">
+                        </ul>
+                </div>
+            </div>
+        <script defer src="thread.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+
+@font-face {
+    font-family: "aahub_light";
+    src: url("aahub_light4.woff2") format("woff2"),
+      url("aahub_light4.woff") format("woff"),
+      url("aahub_light4.ttf") format("ttf");
+    font-display: swap;
+  }
+
+
+  
+#bar{
+    border:solid 1px #cccccc;
+    background-color:#ffffff;
+    margin: 0px;
+    padding:7px;
+    top: 0;
+    z-index: 1;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+
+
+#scroller {
+    overflow: auto;
+    height: 350px;
+}
+
+
+/*******************************
+* 左からの吹き出し
+********************************/
+.left_balloon {
+    background: #f1f0f0;
+    border: 0px solid #777;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0px 15px 15px 15px;
+    display:inline-block;
+    font-family: "aahub_light";
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 18px;
+    word-break : break-all;
+}
+
+.right_balloon {
+    color: #fff;
+    background: #0084ff;
+    border: 0px solid #777;
+    margin: 0px 0px;
+    padding: 10px;
+    border-radius: 15px 0px 15px 15px;
+    float: right;
+    font-family: "aahub_light";
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 18px;
+    word-break : break-all;
+}
+
+/*******************************
+* 割り込みを解除
+********************************/
+.clear_balloon{
+  clear: both;
+}
+
+#resu{
+    color: #000;
+    background-color:#fff; 
+    font-family: "aahub_light";
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.time{
+    color: #666;
+}
+
+.time.me{
+    float: right;
+}
+
+
+.sender_name{
+    margin-bottom: 0px;
+    padding-left: 0px;
+    color: #666;
+}
+.sender_name.me{
+    float: right;
+    padding: 0 0px 0 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #newspase { display: none !important; }
+}
